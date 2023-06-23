@@ -17,7 +17,11 @@ jobs:
           POSTGRES_USER: postgres
           POSTGRES_PASSWORD: ad1e5e1a4ff10b947b84059270e0b1a9
           POSTGRES_DB: postgres
-        options: --health-cmd pg_isready --health-interval 10s --health-timeout 5s --health-retries 5
+        options: >-
+          --health-cmd pg_isready 
+          --health-interval 10s 
+          --health-timeout 5s 
+          --health-retries 5
     steps:
       - name: Checkout
         uses: actions/checkout@v2
