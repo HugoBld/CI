@@ -61,4 +61,3 @@ jobs:
           file: ./Dockerfile
           push: true
           tags: ${{ secrets.DOCKERHUB_USERNAME }}/users-auth-api-boilerplate:latest
-      
