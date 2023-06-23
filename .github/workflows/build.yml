@@ -11,6 +11,8 @@ jobs:
     services:
       postgres:
         image: postgres
+        ports:
+          - 5432:5432
         env:
           POSTGRES_PASSWORD: ad1e5e1a4ff10b947b84059270e0b1a9
         options: >-
