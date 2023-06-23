@@ -11,6 +11,8 @@ jobs:
     services:
       postgres:
         image: postgres
+        ports:
+          - 5432:5432
         env:
           POSTGRES_PASSWORD: ad1e5e1a4ff10b947b84059270e0b1a9
         options: >-
@@ -19,13 +21,13 @@ jobs:
           --health-timeout 5s
           --health-retries 5
     steps:
-      -
+      - 
         name: Checkout
         uses: actions/checkout@v3
-      -
+      - 
         name: Install dependencies
         run: npm ci
-      -
+      - 
         name: Run tests
         run: npm test
       env:
